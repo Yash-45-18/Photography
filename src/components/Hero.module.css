@@ -1,0 +1,147 @@
+/* src/components/Hero.module.css */
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── LEFT ── */
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 9rem 4rem 5rem 7rem;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.2s forwards;
+}
+.eyebrow::before {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.title {
+  font-family: var(--display);
+  font-size: clamp(3rem, 5.5vw, 5rem);
+  font-weight: 300;
+  line-height: 1.06;
+  margin-bottom: 1.8rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.4s forwards;
+}
+.title em {
+  font-style: italic;
+  color: var(--gold);
+  display: block;
+}
+
+.desc {
+  font-size: 0.82rem;
+  line-height: 1.95;
+  color: var(--muted);
+  max-width: 340px;
+  margin-bottom: 2.8rem;
+  letter-spacing: 0.03em;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.6s forwards;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.8s forwards;
+}
+
+.stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 1s forwards;
+}
+.statNum {
+  font-family: var(--display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--gold);
+  display: block;
+  line-height: 1;
+}
+.statLabel {
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.35rem;
+  display: block;
+}
+
+/* ── RIGHT / MOSAIC ── */
+.right {
+  position: relative;
+  overflow: hidden;
+}
+
+.mosaic {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3px;
+}
+
+/* ── IMAGE SLOTS ── */
+/* Each cell is a slot — add your image files and update siteData.js */
+.mosaicCell {
+  overflow: hidden;
+  background: var(--surface);
+  position: relative;
+  transition: transform 0.8s ease;
+}
+.mosaicCell:first-child {
+  grid-row: span 2;
+}
+.mosaicCell img {
+  transition: transform 0.8s ease;
+}
+.mosaicCell:hover img {
+  transform: scale(1.05);
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, var(--dark) 0%, transparent 18%),
+    linear-gradient(to top,   var(--dark) 0%, transparent 12%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .left { padding: 7rem 1.5rem 2.5rem; }
+  .right { height: 55vw; }
+  .stats { gap: 2rem; }
+}

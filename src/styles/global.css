@@ -1,0 +1,142 @@
+/* src/styles/global.css */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold:        #c9a84c;
+  --gold-light:  #e8d5a3;
+  --gold-dim:    rgba(201, 168, 76, 0.15);
+  --dark:        #0d0c0a;
+  --surface:     #141310;
+  --surface2:    #1c1a16;
+  --text:        #f0ece4;
+  --muted:       #9a9284;
+  --border:      rgba(201, 168, 76, 0.18);
+  --display:     'Cormorant Garamond', Georgia, serif;
+  --body:        'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: var(--body);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--body);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── SHARED UTILITIES ── */
+.section-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.section-label::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-h {
+  font-family: var(--display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text);
+}
+.section-h em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--dark);
+  padding: 0.85rem 2.2rem;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 0.3s;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+}
+
+.btn-link {
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
+.btn-link:hover {
+  color: var(--gold);
+}
+
+/* ── IMAGE SLOT ── */
+/* Drop your image files into /public/images/ and /public/images/gallery/
+   They will appear automatically wherever <img src="..." /> is used.
+   The .img-slot class is a fallback shown when the image is missing. */
+.img-slot {
+  width: 100%;
+  height: 100%;
+  background: var(--surface2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: rgba(201, 168, 76, 0.22);
+  letter-spacing: 0.1em;
+  border: 1px dashed rgba(201, 168, 76, 0.15);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
