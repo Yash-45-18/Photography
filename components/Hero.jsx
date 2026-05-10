@@ -53,7 +53,22 @@ export default function Hero() {
           {HERO_IMAGES.map((img, i) => (
             <div key={i} className="mosaic-cell">
               {/* Replace src in /data/siteData.js → HERO_IMAGES to add real photos */}
-              <ImageSlot src={img.src} alt={img.alt} priority={i === 0} />
+              {img.type === 'video' ? (
+  <video
+    src={img.src}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover"
+  />
+) : (
+  <ImageSlot
+    src={img.src}
+    alt={img.alt}
+    priority={i === 0}
+  />
+)}
             </div>
           ))}
         </div>
