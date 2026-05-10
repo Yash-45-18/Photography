@@ -121,10 +121,12 @@
 .mosaicCell:first-child {
   grid-row: span 2;
 }
-.mosaicCell img {
+.mosaicCell img,
+.mosaicCell video {
   transition: transform 0.8s ease;
 }
-.mosaicCell:hover img {
+.mosaicCell:hover img,
+.mosaicCell:hover video {
   transform: scale(1.05);
 }
 
@@ -191,6 +193,7 @@
   .mosaicCell video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
   }
 }
