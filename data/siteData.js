@@ -82,11 +82,11 @@ export const GALLERY_ITEMS = [
 // 5 images shown in the right-side hero collage
 // Set src to '/images/your-file.jpg' or leave null for placeholder
 export const HERO_IMAGES = [
-  { src: null, alt: 'Bride' },
-  { src: null, alt: 'Royal Wedding' },
-  { src: null, alt: 'Couple' },
-  { src: null, alt: 'Candid' },
-  { src: null, alt: 'Film' },
+  { src: `/images/Bride.jpg`, alt: 'Bride' },
+  { src: `/images/RoyalW.jpg`, alt: 'Royal Wedding' },
+  { src: `/images/Couple.jpg`, alt: 'Couple' },
+  { src: `/images/Candid.jpg`, alt: 'Candid' },
+  { src: `/images/Film.mp4`, alt: 'Film', type: 'video' },
 ]
 
 // About section portrait
