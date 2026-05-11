@@ -34,7 +34,7 @@ export const HERO_IMAGES = [
 // ── ABOUT ───────────────────────────────────
 export const ABOUT = {
   // Replace with your actual photo path e.g. '/images/tanishq-portrait.jpg'
-  photo: '/images/about.jpg',
+  photo: '/images/Couple.jpg',
   photoAlt: 'Tanishq — photographer holding camera',
   quote: '"I don\'t just photograph weddings — I preserve the feeling of the day, forever."',
   bio: 'Based in Kannnad Sambajinagar and available worldwide, Tanishq Photography brings fine-art sensibility and documentary storytelling to every wedding. With a passion for authentic moments and cinematic quality, each frame is crafted with intention and heart.',
@@ -84,14 +84,14 @@ export const SERVICES = [
 // Add your images to /public/images/gallery/
 // cat options: 'wedding' | 'couple' | 'portrait' | 'film'
 export const GALLERY_ITEMS = [
-  { src: '/images/gallery/g1.jpg',  alt: 'Bridal portrait',        cat: 'wedding',  label: 'Bridal Portrait' },
-  { src: '/images/gallery/g2.jpg',  alt: 'Pre-wedding couple',     cat: 'couple',   label: 'Pre-Wedding' },
-  { src: '/images/gallery/g3.jpg',  alt: 'Model portfolio shot',   cat: 'portrait', label: 'Model Portfolio' },
-  { src: '/images/gallery/g4.jpg',  alt: 'Wedding ceremony',       cat: 'wedding',  label: 'Ceremony' },
-  { src: '/images/gallery/g5.jpg',  alt: 'Cinematic BTS',          cat: 'film',     label: 'Cinematic BTS' },
-  { src: '/images/gallery/g6.jpg',  alt: 'Bridal styling',         cat: 'wedding',  label: 'Bridal Styling' },
-  { src: '/images/gallery/g7.jpg',  alt: 'Engagement session',     cat: 'couple',   label: 'Engagement' },
-  { src: '/images/gallery/g8.jpg',  alt: 'Reception night',        cat: 'wedding',  label: 'Reception' },
+  { src: '/images/gallery/Bride.jpg',  alt: 'Bridal portrait',        cat: 'wedding',  label: 'Bridal Portrait' },
+  { src: '/images/gallery/Prewedding.jpg',  alt: 'Pre-wedding couple',     cat: 'couple',   label: 'Pre-Wedding' },
+  { src: '/images/gallery/Model.jpg',  alt: 'Model portfolio shot',   cat: 'portrait', label: 'Model Portfolio' },
+  { src: '/images/gallery/Ceremony.jpg',  alt: 'Wedding ceremony',       cat: 'wedding',  label: 'Ceremony' },
+  { src: '/images/gallery/Cinematic.jpg',  alt: 'Cinematic BTS',          cat: 'film',     label: 'Cinematic BTS' },
+  { src: '/images/gallery/Bridalsty.jpg',  alt: 'Bridal styling',         cat: 'wedding',  label: 'Bridal Styling' },
+  { src: '/images/gallery/Engagement.jpg',  alt: 'Engagement session',     cat: 'couple',   label: 'Engagement' },
+  { src: '/images/gallery/Reception.jpg',  alt: 'Reception night',        cat: 'wedding',  label: 'Reception' },
   { src: '/images/gallery/g9.jpg',  alt: 'Behind the scenes',      cat: 'portrait', label: 'Behind The Scenes' },
   { src: '/images/gallery/g10.jpg', alt: 'Film reel moment',       cat: 'film',     label: 'Film Reel' },
   { src: '/images/gallery/g11.jpg', alt: 'Couple love story',      cat: 'couple',   label: 'Love Story' },
